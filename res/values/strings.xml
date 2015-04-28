@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CalculadoraExamen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="lbnCalculadora">CALCULADORA</string>
+    <string name="btnCalculadoraEstandar">CALCULADORA ESTANDAR</string>
+    <string name="btnCalculadoraCientifica">CALCULADORA CIENTIFICA</string>
+    
+    <string name="Numero0">0</string>
+    <string name="Numero1">1</string>
+    <string name="Numero2">2</string>
+    <string name="Numero3">3</string>
+    <string name="Numero4">4</string>
+    <string name="Numero5">5</string>
+    <string name="Numero6">6</string>
+    <string name="Numero7">7</string>
+    <string name="Numero8">8</string>
+    <string name="Numero9">9</string>
+    
+    <string name="suma">+</string>
+    <string name="resta">-</string>
+    <string name="mul">*</string>
+    <string name="div">/</string>
+    
+    <string name="punto">.</string>
+    <string name="igual">=</string>
+    
+    
+    <string name="sen">Sen</string>
+    <string name="cos">Cos</string>
+    <string name="tan">Tan</string>
+    
+    <string name="exp">Exp</string>
+    <string name="raiz">Raiz</string>
+    <string name="del">DEL</string>
+    <string name="ac">AC</string>
+    
+    
+    
+
+</resources>
