@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -24,24 +23,22 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 	boolean cos = false;
 	boolean tan = false;
 	boolean raiz = false;
+	boolean logaritmo = false;
+	boolean facto = false;
+	boolean potenci = false;
+	boolean cuadrad = false;
+	boolean cubo = false;
 	Double[] numero = new Double[20];
 	Double resultado;
+	Double m;
+	Double n;
 	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.calculadora_cientifica);
-		
-//		operando1 = (TextView) findViewById(R.id.operando1);
-//		operando2 = (TextView) findViewById(R.id.operando2);
-//		operacion = (TextView) findViewById(R.id.operacion);
-//		resultado = (TextView) findViewById(R.id.resultado);
-//		borrar = (Button) findViewById(R.id.buttonBorrar);
-
-	 
-
-		
+	
 		Button n0 = (Button)findViewById(R.id.btn0);
 		n0.setOnClickListener(this);
 		Button n1 = (Button)findViewById(R.id.btn1);
@@ -90,13 +87,17 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 		tan.setOnClickListener(this);
 		Button rai = (Button)findViewById(R.id.btnRaiz);
 		rai.setOnClickListener(this);
-		
-		
-		Button b1 = (Button)findViewById(R.id.pb);
-		b1.setOnClickListener(this);
-		
-		
-
+		Button loga = (Button)findViewById(R.id.btnLog);
+		loga.setOnClickListener(this);
+		Button fact = (Button)findViewById(R.id.btnFactorial);
+		fact.setOnClickListener(this);
+		Button raiy = (Button)findViewById(R.id.btnRaizY);
+		raiy.setOnClickListener(this);
+		Button cuadrad = (Button)findViewById(R.id.btnCuadrado);
+		cuadrad.setOnClickListener(this);
+		Button cubo = (Button)findViewById(R.id.btnRaizCubo);
+		cubo.setOnClickListener(this);
+					
 	}
 
 	@Override
@@ -201,15 +202,6 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 				}else if(div == true){
 				resultado = numero [0] / numero[1];
 				pantalla.setText(String.valueOf(resultado));
-				}else if(sen == true){
-				resultado = numero [0]  + numero[1];
-				pantalla.setText(String.valueOf(resultado));
-				}else if(cos == true){
-				resultado = numero [0] / numero[1];
-				pantalla.setText(String.valueOf(resultado));
-				}else if(tan == true){
-				resultado = numero [0] / numero[1];
-				pantalla.setText(String.valueOf(resultado));
 				}
 			
 				decimal = false;
@@ -217,9 +209,7 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 				resta = false;
 				mul = false;
 				div = false;
-				sen = false;
-				cos = false;
-				tan = false;
+	
 			break;
 		case R.id.btnBorrar:
 			
@@ -236,19 +226,109 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 			numero[0] = Double.parseDouble(a);
 			pantalla.setText("");
 			decimal = false;
+			
+			if (sen=true){
+				Servicios serv = new Servicios();
+				resultado = serv.seno(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			sen = false;
 			break;
 		case R.id.btnCos:
 			cos = true;
 			numero[0] = Double.parseDouble(a);
 			pantalla.setText("");
 			decimal = false;
+			
+			if (cos=true){
+				Servicios serv = new Servicios();
+				resultado = serv.coseno(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			cos = false;
 			break;
 		case R.id.btnTan:
 			tan = true;
 			numero[0] = Double.parseDouble(a);
 			pantalla.setText("");
 			decimal = false;
+			
+			if (tan=true){
+				Servicios serv = new Servicios();
+				resultado = serv.tan(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			tan = false;
 			break;
+			
+		case R.id.btnLog:
+			logaritmo = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
+			
+			if (logaritmo=true){
+				Servicios serv = new Servicios();
+				resultado = serv.logaritmo(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			logaritmo = false;
+			break;
+			
+		case R.id.btnRaizCubo:
+			cubo = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
+			
+			if (cubo=true){
+				Servicios serv = new Servicios();
+				resultado = serv.cubo(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			cubo = false;
+			break;
+			
+//		case R.id.btnCuadrado:
+//			cuadrad = true;
+//			numero[0] = Double.parseDouble(a);
+//			pantalla.setText("");
+//			decimal = false;
+//			
+//			if (cuadrad=true){
+//				Servicios serv = new Servicios();
+//				resultado = serv.cua
+//				pantalla.setText(String.valueOf(resultado));
+//			}
+//			cuadrad = false;
+//			break;
+//		case R.id.btnFactorial:
+//			facto = true;
+//			numero[0] = Double.parseDouble(a);
+//			pantalla.setText("");
+//			decimal = false;
+			
+//			if (facto=true){
+//				Servicios serv = new Servicios();
+//				resultado = serv.factorial(numero[0]);
+//				pantalla.setText(String.valueOf(resultado));
+//			}
+//			facto = false;
+//			break;
+			
+//		case R.id.btnRaizY:
+//			potenci = true;
+//			numero[0] = Double.parseDouble(a);
+//			pantalla.setText("");
+//			decimal = false;
+//			
+//			if (potenci=true){
+//				Servicios serv = new Servicios();
+//				resultado = serv.potencian(m , n);
+//				pantalla.setText(String.valueOf(resultado));
+//			}
+//			potenci = false;
+//			break;
 		}
 		}catch(Exception e){
 			

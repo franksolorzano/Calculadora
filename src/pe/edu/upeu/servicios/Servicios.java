@@ -13,13 +13,20 @@ public class Servicios {
 		return numre;
 	}
 	public Double coseno(Double num){
-		return Math.cos(num);
+		Double numre = Math.cos(num);
+		return numre;
 	}
 	public Double tan(Double num){
-		return Math.tan(num);
+		Double numre = Math.tan(num);
+		return numre;
 	}
 	public Double logaritmo(Double num){
-		return Math.log10(num);
+		Double numre = Math.log10(num);
+		return numre;
+	}
+	public Double cubo(Double num){
+		Double numre = Math.cbrt(num);
+		return numre;
 	}
 	public int factorial(int num ){
 		int fact = 1; // this  will be the result
@@ -28,11 +35,18 @@ public class Servicios {
         }
         return fact;
 	}
-	
-	public Double potencian(Double num, int potencia){
-		return Math.pow(num, potencia);
+//	public Double cuadrado(Double num){
+//		Double numre = Math.s
+//		return numre;
+//	}
+	public Double potencian(double m, double n){
+		Double numre = Math.pow(m,n);
+		return numre;
 	}
-	
+//	public Double unoEntreX(Double num){
+//		Double numre = Math.
+//		return numre;
+//	}
 	
 	
 	

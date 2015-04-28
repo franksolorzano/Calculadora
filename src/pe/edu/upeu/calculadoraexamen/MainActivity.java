@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -18,10 +17,18 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
     
+        
     public void onIngresar(View v){
 		Intent inte=new Intent();
 		
 		inte.setClass(this, CalculadoraEstandar.class);
+				
+    	startActivity(inte);		
+    }
+    
+    public void onIngresar1(View v){
+		Intent inte=new Intent();
+		
 		inte.setClass(this, CalculadoraCientifica.class);
 		
     	startActivity(inte);		

@@ -20,29 +20,37 @@
     <!-- ESTILOS DEL ACTIVITY MAIN -->
     
     <style name="lbnEstilo1">
-	    <item name="android:textColor">#D5FAFA</item>
-	    <item name="android:textSize">50px</item>	    
+	    <item name="android:textColor">#0000FF</item>
+	    <item name="android:textSize">30sp</item>	    
 	</style>
 	
 	<style name="btnEstilo1">
-	    <item name="android:background">#DFDFDF</item>
-	    <item name="android:textColor">#7575ea</item>	      
+	    <item name="android:background">#40E0D0</item>
+	    <item name="android:textColor">#A52A2A</item>
+	    <item name="android:textSize">15sp</item>	      
 	</style>
 	
 	<style name="btnEstilo2">
-	    <item name="android:background">#DFDFDF</item>	        
-	    <item name="android:textColor">#7575ea</item>		      
+	    <item name="android:background">#40E0D0</item>	        
+	    <item name="android:textColor">#A52A2A</item>
+	    <item name="android:textSize">15sp</item>		      
 	</style>
 
 	<!-- ESTILOS DE LA CALCULADORA CIENTIFICA -->
 	
 	<style name="lbnCalCien">
-	    <item name="android:background">#D5D5D5</item>	    	    
+	    
+	    <item name="android:textSize">10sp</item>	    	    
 	</style>
 	
 	<!-- ESTILOS DE LA CALCULADORA CIENTIFICA -->
 	
 	<style name="lbnCalEstan">
-	    <item name="android:background">#D5D5D5</item>	       
+	<item name="android:background">#D5D5D5</item>		
 	</style>
+	
+    <style name="lbnCalculadora">
+	<item name="android:background">#B0E0E6</item>		
+	</style>
+	
 </resources>

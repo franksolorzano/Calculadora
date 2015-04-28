@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    style="@style/lbnCalculadora"    
     tools:context="pe.edu.upeu.calculadoraexamen.MainActivity" >
 
     <TextView
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:onClick="onIngresar"
+        android:onClick="onIngresar1"
         android:text="@string/btnCalculadoraCientifica" />
 
 </RelativeLayout>

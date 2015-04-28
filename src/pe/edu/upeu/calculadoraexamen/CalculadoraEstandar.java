@@ -1,6 +1,7 @@
 package pe.edu.upeu.calculadoraexamen;
 
 import pe.edu.upeu.calculadoraexamen.R;
+import pe.edu.upeu.servicios.Servicios;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 	boolean resta = false;
 	boolean mul = false;
 	boolean div = false;
+	boolean raiz = false;
 	Double[] numero = new Double[20];
 	Double resultado;
 	
@@ -65,19 +67,11 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 		borrar.setOnClickListener(this);
 		Button limpiar = (Button)findViewById(R.id.btnLimpiar);
 		limpiar.setOnClickListener(this);
-		
-		Button seno = (Button)findViewById(R.id.btnSen);
-		seno.setOnClickListener(this);
-		Button cos = (Button)findViewById(R.id.btnCos);
-		cos.setOnClickListener(this);
-		Button tan = (Button)findViewById(R.id.btnTan);
-		tan.setOnClickListener(this);
-		
-		Button b1 = (Button)findViewById(R.id.pb);
-		b1.setOnClickListener(this);
+		Button rai = (Button)findViewById(R.id.btnRaiz);
+		rai.setOnClickListener(this);
 		
 		
-
+			
 	}
 
 	@Override
@@ -151,6 +145,19 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 			pantalla.setText("");
 			decimal = false;
 			break;
+		case R.id.btnRaiz:
+			raiz = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
+			
+			if (raiz=true){
+				Servicios serv = new Servicios();
+				resultado = serv.raiz(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			raiz = false;
+			break;
 		case R.id.btnIgual:
 			numero[1] = Double.parseDouble(a);
 			
@@ -180,12 +187,7 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 			pantalla.setText("");
 			decimal = false;
 			break;
-		case R.id.btnSen:
-			break;
-		case R.id.btnCos:
-			break;
-		case R.id.btnTan:
-			break;
+
 		}
 		}catch(Exception e){
 			

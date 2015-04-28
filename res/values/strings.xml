@@ -34,9 +34,40 @@
     <string name="tan">Tan</string>
     
     <string name="exp">Exp</string>
-    <string name="raiz">Raiz</string>
-    <string name="del">DEL</string>
+    <string name="Raiz">Ra</string>
+    <string name="del">De</string>
     <string name="ac">AC</string>
+    
+    <string name="Boton2"></string>
+    <string name="Boton3"></string>
+    <string name="Cuadrado">X^2</string>
+    <string name="Exponencial">X^y</string>
+    <string name="Cubo">X^3</string>
+    <string name="Logaritmo">Log</string>
+    
+    <string name="Boton4"></string>
+    <string name="Boton5"></string>
+    <string name="Boton6"></string>
+    <string name="Boton7"></string>
+    <string name="Boton8"></string>
+    <string name="Factorial">n!</string>
+    <string name="RaizY">R^Y</string>
+    <string name="RaizCubo">R^3</string>
+    <string name="DiesExp">10^x</string>
+    
+    <string name="MC">MC</string>
+    <string name="MR">MR</string>
+    <string name="MS">MS</string>
+    <string name="Mmas">M+</string>
+    <string name="Mmenos">M-</string>
+    
+    <string name="CE">CE</string>
+    <string name="Porcentaje">%</string>
+    <string name="UnoEntreX">1/x</string>
+    <string name="MasMenos">+-</string>
+    
+    
+    
     
     
     
