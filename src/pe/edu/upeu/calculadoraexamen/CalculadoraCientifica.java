@@ -3,6 +3,7 @@ package pe.edu.upeu.calculadoraexamen;
 import pe.edu.upeu.calculadoraexamen.R;
 import pe.edu.upeu.servicios.Servicios;
 import android.support.v7.app.ActionBarActivity;
+import android.R.integer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,6 +29,10 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 	boolean potenci = false;
 	boolean cuadrad = false;
 	boolean cubo = false;
+	boolean cub = false;
+	boolean exp = false;
+	boolean diesexp = false;
+	boolean unoexp = false;
 	Double[] numero = new Double[20];
 	Double resultado;
 	Double m;
@@ -97,6 +102,14 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 		cuadrad.setOnClickListener(this);
 		Button cubo = (Button)findViewById(R.id.btnRaizCubo);
 		cubo.setOnClickListener(this);
+		Button cub = (Button)findViewById(R.id.btnCubo);
+		cub.setOnClickListener(this);
+		Button exp = (Button)findViewById(R.id.btnExp);
+		exp.setOnClickListener(this);
+		Button diesexp = (Button)findViewById(R.id.btnDiesExp);
+		diesexp.setOnClickListener(this);
+		Button unoexp = (Button)findViewById(R.id.UnoEntreX);
+		unoexp.setOnClickListener(this);
 					
 	}
 
@@ -187,6 +200,12 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 			pantalla.setText("");
 			decimal = false;
 			break;
+		case R.id.UnoEntreX:
+			unoexp = true;
+			numero[0] = (double) 1;
+			pantalla.setText("");
+			decimal = false;
+			break;
 		case R.id.btnIgual:
 			numero[1] = Double.parseDouble(a);
 			
@@ -202,6 +221,9 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 				}else if(div == true){
 				resultado = numero [0] / numero[1];
 				pantalla.setText(String.valueOf(resultado));
+				}else if(unoexp == true){
+				resultado = numero [0] / numero[1];
+				pantalla.setText(String.valueOf(resultado));
 				}
 			
 				decimal = false;
@@ -209,6 +231,7 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 				resta = false;
 				mul = false;
 				div = false;
+				unoexp = false;
 	
 			break;
 		case R.id.btnBorrar:
@@ -289,33 +312,72 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 			cubo = false;
 			break;
 			
-//		case R.id.btnCuadrado:
-//			cuadrad = true;
-//			numero[0] = Double.parseDouble(a);
-//			pantalla.setText("");
-//			decimal = false;
-//			
-//			if (cuadrad=true){
-//				Servicios serv = new Servicios();
-//				resultado = serv.cua
-//				pantalla.setText(String.valueOf(resultado));
-//			}
-//			cuadrad = false;
-//			break;
-//		case R.id.btnFactorial:
-//			facto = true;
-//			numero[0] = Double.parseDouble(a);
-//			pantalla.setText("");
-//			decimal = false;
+		case R.id.btnCuadrado:
+			cuadrad = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
+			
+			if (cuadrad=true){
+				Servicios serv = new Servicios();
+				resultado = serv.elevadocuadrado(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			cuadrad = false;
+			break;
+		case R.id.btnCubo:
+			cub = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
+			
+			if (cub=true){
+				Servicios serv = new Servicios();
+				resultado = serv.elevadocubo(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			cub = false;
+			break;
+		case R.id.btnExp:
+			exp = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
+			
+			if (exp=true){
+				Servicios serv = new Servicios();
+				resultado = serv.elevadoexponente(numero[0], numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			exp = false;
+			break;
+		case R.id.btnDiesExp:
+			diesexp = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
+			
+			if (diesexp=true){
+				Servicios serv = new Servicios();
+				resultado = serv.elevadoDiesexp(numero[0]);
+				pantalla.setText(String.valueOf(resultado));
+			}
+			diesexp = false;
+			break;
+		case R.id.btnFactorial:
+			facto = true;
+			numero[0] = Double.parseDouble(a);
+			pantalla.setText("");
+			decimal = false;
 			
 //			if (facto=true){
 //				Servicios serv = new Servicios();
-//				resultado = serv.factorial(numero[0]);
+//				resultado = (double) serv.factorial(Integer.parseInt(String.(numero[0]));
 //				pantalla.setText(String.valueOf(resultado));
 //			}
 //			facto = false;
 //			break;
-			
+//			
 //		case R.id.btnRaizY:
 //			potenci = true;
 //			numero[0] = Double.parseDouble(a);
@@ -329,6 +391,8 @@ public class CalculadoraCientifica extends ActionBarActivity implements OnClickL
 //			}
 //			potenci = false;
 //			break;
+
+
 		}
 		}catch(Exception e){
 			

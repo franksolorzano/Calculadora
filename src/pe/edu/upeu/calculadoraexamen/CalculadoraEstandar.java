@@ -19,6 +19,7 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 	boolean mul = false;
 	boolean div = false;
 	boolean raiz = false;
+	boolean unoexp = false;
 	Double[] numero = new Double[20];
 	Double resultado;
 	
@@ -69,6 +70,8 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 		limpiar.setOnClickListener(this);
 		Button rai = (Button)findViewById(R.id.btnRaiz);
 		rai.setOnClickListener(this);
+		Button unoexp = (Button)findViewById(R.id.UnoEntreX);
+		unoexp.setOnClickListener(this);
 		
 		
 			
@@ -158,6 +161,12 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 			}
 			raiz = false;
 			break;
+		case R.id.UnoEntreX:
+			unoexp = true;
+			numero[0] = (double) 1;
+			pantalla.setText("");
+			decimal = false;
+			break;
 		case R.id.btnIgual:
 			numero[1] = Double.parseDouble(a);
 			
@@ -173,13 +182,17 @@ public class CalculadoraEstandar extends ActionBarActivity implements OnClickLis
 				}else if(div == true){
 				resultado = numero [0] / numero[1];
 				pantalla.setText(String.valueOf(resultado));
-				}
+				}else if(unoexp == true){
+				resultado = numero [0] / numero[1];
+				pantalla.setText(String.valueOf(resultado));
+					}
 			
 				decimal = false;
 				suma = false;
 				resta = false;
 				mul = false;
 				div = false;
+				unoexp = false;
 			break;
 		case R.id.btnBorrar:
 			break;

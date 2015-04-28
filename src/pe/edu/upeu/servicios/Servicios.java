@@ -1,4 +1,5 @@
 package pe.edu.upeu.servicios;
+import android.annotation.SuppressLint;
 import java.math.*;
 public class Servicios {
 
@@ -28,10 +29,27 @@ public class Servicios {
 		Double numre = Math.cbrt(num);
 		return numre;
 	}
-	public int factorial(int num ){
+	
+	public Double elevadocubo(Double num){
+		Double numre = Math.pow(num, 3);
+		return numre;
+	}
+	public Double elevadocuadrado(Double num){
+		Double numre = Math.pow(num, 2);
+		return numre;
+	}
+	public Double elevadoexponente(Double num, Double nume){
+		Double numre = Math.pow(num, nume);
+		return numre;
+	}
+	public Double elevadoDiesexp(Double num){
+		Double numre = Math.pow(10, num);
+		return numre;
+	}
+		public int factorial(int num ){
 		int fact = 1; // this  will be the result
         for (int i = 1; i <= num; i++) {
-            fact *= i;
+            fact = fact*i;
         }
         return fact;
 	}

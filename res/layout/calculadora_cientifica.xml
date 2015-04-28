@@ -126,12 +126,13 @@
         			android:layout_height="wrap_content"
         			android:text="@string/MC"   
         	    	/>
+
         	    <Button
-        	    	android:id="@+id/btnBorrar" 
-        	    	android:layout_width="35dp"
-        			android:layout_height="wrap_content"
-        			android:text="@string/del"   
-        	    	/>
+        	        android:id="@+id/btnBorrar"
+        	        android:layout_width="35dp"
+        	        android:layout_height="62dp"
+        	        android:text="@string/del" />
+
         	    <Button
         	    	android:id="@+id/btn7" 
         	    	android:layout_width="35dp"
@@ -171,12 +172,13 @@
         			android:layout_height="wrap_content"
         			android:text="@string/MR"   
         	    	/>
+
         	    <Button
-        	    	android:id="@+id/btnCE" 
-        	    	android:layout_width="35dp"
-        			android:layout_height="wrap_content"
-        			android:text="@string/CE"   
-        	    	/>
+        	        android:id="@+id/btnCE"
+        	        android:layout_width="35dp"
+        	        android:layout_height="62dp"
+        	        android:text="@string/CE" />
+
         	    <Button
         	    	android:id="@+id/btn8" 
         	    	android:layout_width="35dp"

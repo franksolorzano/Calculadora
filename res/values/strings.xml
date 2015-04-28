@@ -35,7 +35,7 @@
     
     <string name="exp">Exp</string>
     <string name="Raiz">Ra</string>
-    <string name="del">De</string>
+    <string name="del"></string>
     <string name="ac">AC</string>
     
     <string name="Boton2"></string>
@@ -61,7 +61,7 @@
     <string name="Mmas">M+</string>
     <string name="Mmenos">M-</string>
     
-    <string name="CE">CE</string>
+    <string name="CE"></string> 
     <string name="Porcentaje">%</string>
     <string name="UnoEntreX">1/x</string>
     <string name="MasMenos">+-</string>
